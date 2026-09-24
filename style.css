@@ -1,110 +1,211 @@
-*{
-box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-color:#1f2937;
-line-height:1.7;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    line-height: 1.7;
 }
 
-.hero{
-min-height:500px;
-background:#163b66;
-color:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:60px 10%;
-gap:40px;
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 500px;
+    background: #163b66;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 10%;
+    gap: 40px;
 }
 
-.hero-text{
-max-width:650px;
+
+/* =========================
+   TEXT HERO
+========================= */
+
+.hero-text {
+    max-width: 650px;
 }
 
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.hero h2{
-font-weight:normal;
+.hero h2 {
+    font-weight: normal;
 }
 
-.photo img{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:6px solid white;
+
+/* =========================
+   FOTO
+========================= */
+
+.photo {
+    flex-shrink: 0;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:white;
-color:#163b66;
-text-decoration:none;
-border-radius:30px;
-margin:15px 10px 0 0;
-font-weight:bold;
+
+/* Border tetap di tempat */
+
+.photo-frame {
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+    border: 6px solid white;
+
+    overflow: hidden;
+
+    position: relative;
 }
 
-.outline{
-background:transparent;
-border:2px solid white;
-color:white;
+
+/* Foto di dalam border */
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 150% 50%;
+    display: block;
 }
 
-main{
-max-width:1000px;
-margin:auto;
-padding:40px 25px;
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: white;
+    color: #163b66;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    margin: 15px 10px 0 0;
+
+    font-weight: bold;
 }
 
-section{
-margin-bottom:40px;
+.outline {
+    background: transparent;
+
+    border: 2px solid white;
+
+    color: white;
 }
 
-h2{
-color:#163b66;
-border-bottom:3px solid #163b66;
-padding-bottom:8px;
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 40px 25px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+section {
+    margin-bottom: 40px;
 }
 
-.grid div,.card{
-background:#f4f7fa;
-padding:20px;
-border-radius:12px;
+h2 {
+    color: #163b66;
+
+    border-bottom: 3px solid #163b66;
+
+    padding-bottom: 8px;
 }
 
-.timeline{
-border-left:4px solid #163b66;
-padding-left:20px;
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 15px;
 }
 
-footer{
-background:#163b66;
-color:white;
-text-align:center;
-padding:25px;
+.grid div,
+.card {
+    background: #f4f7fa;
+
+    padding: 20px;
+
+    border-radius: 12px;
 }
 
-@media(max-width:700px){
-.hero{
-flex-direction:column-reverse;
-text-align:center;
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    border-left: 4px solid #163b66;
+
+    padding-left: 20px;
 }
 
-.hero h1{
-font-size:30px;
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #163b66;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 50px 25px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .photo-frame {
+        width: 220px;
+        height: 220px;
+    }
+
 }
